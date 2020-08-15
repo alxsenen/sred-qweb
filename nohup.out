@@ -1,0 +1,215 @@
+2020-08-10T17:30:15+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 17.5.0 (/usr/bin/python 2.7.16) starting up.
+2020-08-10T17:30:15+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-08-10T17:30:15+0200 [-] RootSite (TLS) starting on 9090
+2020-08-10T17:30:15+0200 [qwebirc.root.RootSite#info] Starting factory <qwebirc.root.RootSite instance at 0x7f4f1de19b00>
+2020-08-10T17:30:21+0200 [twisted.python.log#info] "198.41.231.201" - - [10/Aug/2020:15:30:21 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+2020-08-10T17:30:22+0200 [twisted.python.log#info] "198.41.231.201" - - [10/Aug/2020:15:30:22 +0000] "GET /css/qui-b13bdf361072ba1836950057c6afd6e371dc5c2b.mcss HTTP/1.1" 304 - "https://webchat.segured.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+2020-08-10T17:30:23+0200 [twisted.python.log#info] "198.41.231.201" - - [10/Aug/2020:15:30:22 +0000] "GET /panes/connect.html HTTP/1.1" 304 - "https://webchat.segured.org/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0"
+2020-08-10T17:31:06+0200 [-] Received SIGTERM, shutting down.
+2020-08-10T17:31:06+0200 [-] (TLS Port 9090 Closed)
+2020-08-10T17:31:06+0200 [qwebirc.root.RootSite#info] Stopping factory <qwebirc.root.RootSite instance at 0x7f4f1de19b00>
+2020-08-10T17:31:06+0200 [-] Main loop terminated.
+2020-08-10T17:31:06+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
+2020-08-10T17:40:46+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 17.5.0 (/usr/bin/python 2.7.16) starting up.
+2020-08-10T17:40:46+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2020-08-10T17:40:46+0200 [-] RootSite (TLS) starting on 9090
+2020-08-10T17:40:46+0200 [qwebirc.root.RootSite#info] Starting factory <qwebirc.root.RootSite instance at 0x7f987998ea70>
+2020-08-10T17:40:51+0200 [-] <twisted.web.static.NoRangeStaticProducer object at 0x7f987a855790> failed, producing will be stopped:
+	Traceback (most recent call last):
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 1252, in mainLoop
+	    self.runUntilCurrent()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 878, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 671, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 517, in _oneWorkUnit
+	    result = next(self._iterator)
+	--- <exception caught here> ---
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/_producer_helpers.py", line 66, in _pull
+	    self._producer.resumeProducing()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/static.py", line 715, in resumeProducing
+	    self.request.finish()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 225, in finish
+	    return http.Request.finish(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 983, in finish
+	    self.channel.factory.log(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2871, in log
+	    line = self._logFormatter(self._logDateTime, request) + u"\n"
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2477, in combinedLogFormatter
+	    ip=_escape(request.getClientIP() or b"-"),
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 53, in getClientIP
+	    ip = self._getClientIP()
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 39, in _getClientIP
+	    if real_ip not in config.FORWARDED_FOR_IPS:
+	exceptions.AttributeError: 'module' object has no attribute 'FORWARDED_FOR_IPS'
+	
+2020-08-10T17:40:52+0200 [HTTPChannel (TLSMemoryBIOProtocol),1,198.41.231.91] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/protocols/basic.py", line 571, in dataReceived
+	    why = self.lineReceived(line)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 1964, in lineReceived
+	    self.allContentReceived()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2059, in allContentReceived
+	    req.requestReceived(command, path, version)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 869, in requestReceived
+	    self.process()
+	--- <exception caught here> ---
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 184, in process
+	    self.render(resrc)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 310, in render
+	    self.finish()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 225, in finish
+	    return http.Request.finish(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 983, in finish
+	    self.channel.factory.log(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2871, in log
+	    line = self._logFormatter(self._logDateTime, request) + u"\n"
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2477, in combinedLogFormatter
+	    ip=_escape(request.getClientIP() or b"-"),
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 53, in getClientIP
+	    ip = self._getClientIP()
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 39, in _getClientIP
+	    if real_ip not in config.FORWARDED_FOR_IPS:
+	exceptions.AttributeError: 'module' object has no attribute 'FORWARDED_FOR_IPS'
+	
+2020-08-10T17:40:52+0200 [HTTPChannel (TLSMemoryBIOProtocol),1,198.41.231.91] Unhandled Error
+	Traceback (most recent call last):
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/python/log.py", line 103, in callWithLogger
+	    return callWithContext({"system": lp}, func, *args, **kw)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/python/log.py", line 86, in callWithContext
+	    return context.call({ILogContext: newCtx}, func, *args, **kw)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/python/context.py", line 122, in callWithContext
+	    return self.currentContext().callWithContext(ctx, func, *args, **kw)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/python/context.py", line 85, in callWithContext
+	    return func(*args,**kw)
+	--- <exception caught here> ---
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/posixbase.py", line 597, in _doReadOrWrite
+	    why = selectable.doRead()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/tcp.py", line 208, in doRead
+	    return self._dataReceived(data)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/tcp.py", line 214, in _dataReceived
+	    rval = self.protocol.dataReceived(data)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/protocols/tls.py", line 330, in dataReceived
+	    self._flushReceiveBIO()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/protocols/tls.py", line 295, in _flushReceiveBIO
+	    ProtocolWrapper.dataReceived(self, bytes)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/protocols/policies.py", line 120, in dataReceived
+	    self.wrappedProtocol.dataReceived(data)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/protocols/basic.py", line 571, in dataReceived
+	    why = self.lineReceived(line)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 1964, in lineReceived
+	    self.allContentReceived()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2059, in allContentReceived
+	    req.requestReceived(command, path, version)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 869, in requestReceived
+	    self.process()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 186, in process
+	    self.processingFailed(failure.Failure())
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 331, in processingFailed
+	    self.finish()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 225, in finish
+	    return http.Request.finish(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 983, in finish
+	    self.channel.factory.log(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2871, in log
+	    line = self._logFormatter(self._logDateTime, request) + u"\n"
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2477, in combinedLogFormatter
+	    ip=_escape(request.getClientIP() or b"-"),
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 53, in getClientIP
+	    ip = self._getClientIP()
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 39, in _getClientIP
+	    if real_ip not in config.FORWARDED_FOR_IPS:
+	exceptions.AttributeError: 'module' object has no attribute 'FORWARDED_FOR_IPS'
+	
+2020-08-10T17:40:56+0200 [-] <twisted.web.static.NoRangeStaticProducer object at 0x7f9879892f50> failed, producing will be stopped:
+	Traceback (most recent call last):
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 1252, in mainLoop
+	    self.runUntilCurrent()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 878, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 671, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 517, in _oneWorkUnit
+	    result = next(self._iterator)
+	--- <exception caught here> ---
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/_producer_helpers.py", line 66, in _pull
+	    self._producer.resumeProducing()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/static.py", line 715, in resumeProducing
+	    self.request.finish()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 225, in finish
+	    return http.Request.finish(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 983, in finish
+	    self.channel.factory.log(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2871, in log
+	    line = self._logFormatter(self._logDateTime, request) + u"\n"
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2477, in combinedLogFormatter
+	    ip=_escape(request.getClientIP() or b"-"),
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 53, in getClientIP
+	    ip = self._getClientIP()
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 39, in _getClientIP
+	    if real_ip not in config.FORWARDED_FOR_IPS:
+	exceptions.AttributeError: 'module' object has no attribute 'FORWARDED_FOR_IPS'
+	
+2020-08-10T17:40:57+0200 [-] <twisted.web.static.NoRangeStaticProducer object at 0x7f98798a05d0> failed, producing will be stopped:
+	Traceback (most recent call last):
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 1252, in mainLoop
+	    self.runUntilCurrent()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 878, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 671, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 517, in _oneWorkUnit
+	    result = next(self._iterator)
+	--- <exception caught here> ---
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/_producer_helpers.py", line 66, in _pull
+	    self._producer.resumeProducing()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/static.py", line 715, in resumeProducing
+	    self.request.finish()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 225, in finish
+	    return http.Request.finish(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 983, in finish
+	    self.channel.factory.log(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2871, in log
+	    line = self._logFormatter(self._logDateTime, request) + u"\n"
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2477, in combinedLogFormatter
+	    ip=_escape(request.getClientIP() or b"-"),
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 53, in getClientIP
+	    ip = self._getClientIP()
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 39, in _getClientIP
+	    if real_ip not in config.FORWARDED_FOR_IPS:
+	exceptions.AttributeError: 'module' object has no attribute 'FORWARDED_FOR_IPS'
+	
+2020-08-10T17:40:58+0200 [-] <twisted.web.static.NoRangeStaticProducer object at 0x7f98798a0ad0> failed, producing will be stopped:
+	Traceback (most recent call last):
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 1252, in mainLoop
+	    self.runUntilCurrent()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/base.py", line 878, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 671, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/task.py", line 517, in _oneWorkUnit
+	    result = next(self._iterator)
+	--- <exception caught here> ---
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/internet/_producer_helpers.py", line 66, in _pull
+	    self._producer.resumeProducing()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/static.py", line 715, in resumeProducing
+	    self.request.finish()
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/server.py", line 225, in finish
+	    return http.Request.finish(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 983, in finish
+	    self.channel.factory.log(self)
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2871, in log
+	    line = self._logFormatter(self._logDateTime, request) + u"\n"
+	  File "/home/ircd/.local/lib/python2.7/site-packages/twisted/web/http.py", line 2477, in combinedLogFormatter
+	    ip=_escape(request.getClientIP() or b"-"),
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 53, in getClientIP
+	    ip = self._getClientIP()
+	  File "/home/ircd/core/qwebirc/qwebirc/root.py", line 39, in _getClientIP
+	    if real_ip not in config.FORWARDED_FOR_IPS:
+	exceptions.AttributeError: 'module' object has no attribute 'FORWARDED_FOR_IPS'
+	
+2020-08-10T17:41:32+0200 [-] Received SIGTERM, shutting down.
+2020-08-10T17:41:32+0200 [-] (TLS Port 9090 Closed)
+2020-08-10T17:41:32+0200 [qwebirc.root.RootSite#info] Stopping factory <qwebirc.root.RootSite instance at 0x7f987998ea70>
+2020-08-10T17:41:32+0200 [-] Main loop terminated.
+2020-08-10T17:41:32+0200 [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.

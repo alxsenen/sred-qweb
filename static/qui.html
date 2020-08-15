@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <base />
+  <title>SRed Webchat (qwebirc)</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="icon" sizes="192x192" href="images/highresicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="https://files.segured.org/logos/favicon.png"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+  <link rel="stylesheet" href="css/segured.css" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">   
+  <script type="text/javascript">
+    $('.btn').removeClass('tab-selected tab-unselected btn-secondary');
+  </script>
+  <script type="text/javascript" src="js/qui-b13bdf361072ba1836950057c6afd6e371dc5c2b.js"></script>
+  <script type="text/javascript">
+    var ui = new qwebirc.ui.Interface("ircui", qwebirc.ui.QUI, {"appTitle":"SRed Webchat","dynamicBaseURL":"","dynamicConfiguration":false,"baseURL":"https://webchat.segured.org/","validateNickname":false,"customMenuItems":[],"networkServices":["Q!TheQBot@CServe.quakenet.org"],"nickValidation":{"maxLen":15,"validSubChars":"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_[]{}`^\\|0123456789-","validFirstChar":"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_[]{}`^\\|","minLen":3},"staticBaseURL":"","loginRegex":"^You are now logged in as [^ ]+\\.$","networkName":"SRed"});
+  </script>
+
+  <style>
+  .qwebirc-loginbox {
+		margin: 15% auto auto auto;
+	}
+	.logo {
+		width: 100%;
+		height: auto;
+		max-width: 330px;
+	}
+	.bebas {
+		font-family: 'Bebas Neue';
+	}
+
+	.dropdown-tab {
+		margin: 0 20px 0 0;
+	}
+
+	.qwebirc-qui .dropdownmenu {
+		top: 45px !important;
+	}
+
+	.roboto {
+		font-family: 'Roboto', sans-serif;
+	}
+	
+	.qwebirc-qui a.tab-hilight-speech {
+		color: #ccc !important;
+	}
+	
+	.qwebirc-qui a.tab-hilight-activity {
+		color: #fff !important;
+		font-weight: bold;
+	}
+  </style>
+</head>
+<body>
+  <div id="ircui">
+    <noscript>
+      <div id="noscript">Javascript is required to use IRC.</div>
+    </noscript>
+  </div>
+</body>
+</html>
+
